@@ -20,7 +20,7 @@ class NavegacionActivity : AppCompatActivity() {
 
     fun pasarAVentanados(view: View){
 
-        Log.v("NavegacionActivity","Voy a pasar a ventana dos")
+        Log.v("NavegacionActivity","Voy a pasar a ventana dos prueba")
 
     }
 }
