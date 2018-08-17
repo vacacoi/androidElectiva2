@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Navegación</string>
+    <string name="txt_ventana_uno">Ventana principal</string>
+    <string name="btn_pasar_a_dos">Pasar a ventana dos</string>
+</resources>
