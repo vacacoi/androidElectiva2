@@ -20,7 +20,17 @@
         android:layout_height="wrap_content"
         android:onClick="pasarAVentanados"
         android:text="@string/btn_pasar_a_dos"
-        android:layout_centerInParent="true"/>
+        android:layout_centerInParent="true"
+        />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="60dp"
+        android:text="@string/btn_pasar_a_tres" />
 
 
 </RelativeLayout>

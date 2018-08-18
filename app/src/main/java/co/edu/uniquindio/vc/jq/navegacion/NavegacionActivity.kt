@@ -5,6 +5,10 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import android.widget.Toast
+
+const val CODIGO_VENTANA_NAV = 100
+const val RESULTADO = "RESULTADO"
 
 
 /**
@@ -29,5 +33,24 @@ class NavegacionActivity : AppCompatActivity() {
         val intent = Intent(this,VentanaDosActivity::class.java);
         startActivity(intent);
 
+    }
+
+    /**
+     * Permite pasar a ventana tres
+     */
+    fun pasarAVentanatres(view: View){
+
+        val intent = Intent(this,VentanaTresActivity::class.java)
+        startActivityForResult(intent, CODIGO_VENTANA_NAV)
+
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+
+        val resultado = data?.getExtras()?.getString(RESULTADO);
+        if (resultCode == RESULT_OK) {
+            Toast.makeText(this, "$resultCode volví a la venta inicial $resultado", Toast.LENGTH_LONG).show()
+        }
     }
 }
