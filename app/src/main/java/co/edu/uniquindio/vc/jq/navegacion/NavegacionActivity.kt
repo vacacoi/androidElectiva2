@@ -50,7 +50,7 @@ class NavegacionActivity : AppCompatActivity() {
 
         val resultado = data?.getExtras()?.getString(RESULTADO);
         if (resultCode == RESULT_OK) {
-            Toast.makeText(this, "$resultCode volví a la venta inicial $resultado", Toast.LENGTH_LONG).show()
+            Toast.makeText(this, "$resultCode volví a la ventana inicial $resultado", Toast.LENGTH_LONG).show()
         }
     }
 }
