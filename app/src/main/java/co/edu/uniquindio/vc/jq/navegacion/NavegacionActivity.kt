@@ -9,7 +9,7 @@ import android.widget.Toast
 
 const val CODIGO_VENTANA_NAV = 100
 const val RESULTADO = "RESULTADO"
-
+const val NAVEGACION_ACTIVITY = "NavegacionActivity"
 
 /**
  * Actividad encargada de manejar navegación de la App
@@ -53,4 +53,35 @@ class NavegacionActivity : AppCompatActivity() {
             Toast.makeText(this, "$resultCode volví a la ventana inicial $resultado", Toast.LENGTH_LONG).show()
         }
     }
+
+    override fun onStart() {
+        super.onStart()
+        Log.v(NAVEGACION_ACTIVITY,"onStart")
+    }
+
+    override fun onResume() {
+        super.onResume()
+        Log.v(NAVEGACION_ACTIVITY,"onResume")
+    }
+
+    override fun onRestart() {
+        super.onRestart()
+        Log.v(NAVEGACION_ACTIVITY,"onRestart")
+    }
+
+    override fun onPause() {
+        super.onPause()
+        Log.v(NAVEGACION_ACTIVITY,"onPause")
+    }
+
+    override fun onStop() {
+        super.onStop()
+        Log.v(NAVEGACION_ACTIVITY,"onStop")
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        Log.v(NAVEGACION_ACTIVITY,"onDestroy")
+    }
+
 }
