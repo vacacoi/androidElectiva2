@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="co.edu.uniquindio.vc.jq.navegacion.VentanaDosActivity">
+    tools:context="co.edu.uniquindio.vc.jq.navegacion.activity.VentanaDosActivity">
 
     <TextView
         android:text="@string/txt_ventana_dos"

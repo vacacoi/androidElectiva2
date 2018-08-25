@@ -1,7 +1,10 @@
 <resources>
     <string name="app_name">Navegación</string>
     <string name="txt_ventana_uno">Ventana principal</string>
-    <string name="btn_pasar_a_dos">Pasar a ventana dos</string>
-    <string name="btn_pasar_a_tres">Pasar a ventana tres</string>
+    <string name="txt_ventana_uno_mensaje">Hola Android!!!</string>
+    <string name="txt_ventana_uno_mensaje_dos">Hola Mundo!!!</string>
     <string name="txt_ventana_dos">Ventana dos</string>
+    <string name="btn_pasar_a_dos">Pasar a ventana dos</string>
+    <string name="btn_pasar_a_mensaje">Cambiar mensaje</string>
+    <string name="btn_pasar_a_tres">Pasar a ventana tres</string>
 </resources>

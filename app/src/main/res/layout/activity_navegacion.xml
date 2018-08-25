@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="co.edu.uniquindio.vc.jq.navegacion.NavegacionActivity">
+    tools:context="co.edu.uniquindio.vc.jq.navegacion.activity.NavegacionActivity">
 
     <TextView
         android:id="@+id/txt_titulo_ventana_uno"
@@ -15,12 +15,36 @@
         android:textSize="12pt"
         android:textStyle="bold"/>
 
+    <TextView
+        android:id="@+id/txt_mensaje_uno"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/txt_ventana_uno_mensaje"
+        android:layout_below="@+id/txt_titulo_ventana_uno"
+        android:layout_marginTop="12dp"
+        android:textSize="10pt"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        />
+
     <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_pasar_a_mensaje"
+        android:layout_above="@+id/btn_pasar_dos"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="12dp"
+        android:onClick="cambiarMensaje"/>
+
+
+    <Button
+        android:id="@+id/btn_pasar_dos"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="pasarAVentanados"
         android:text="@string/btn_pasar_a_dos"
         android:layout_centerInParent="true"
+
         />
 
     <Button

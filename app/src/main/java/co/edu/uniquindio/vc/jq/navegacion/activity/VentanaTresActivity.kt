@@ -1,7 +1,8 @@
-package co.edu.uniquindio.vc.jq.navegacion
+package co.edu.uniquindio.vc.jq.navegacion.activity
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import co.edu.uniquindio.vc.jq.navegacion.R
 
 class VentanaTresActivity : AppCompatActivity() {
 
