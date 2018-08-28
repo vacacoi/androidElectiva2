@@ -8,13 +8,16 @@ import android.view.View
 import android.widget.Toast
 import co.edu.uniquindio.vc.jq.navegacion.R
 import co.edu.uniquindio.vc.jq.navegacion.vo.Estudiante
+import co.edu.uniquindio.vc.jq.navegacion.vo.Salon
 import kotlinx.android.synthetic.main.activity_navegacion.*
 import java.util.*
+import kotlin.collections.ArrayList
 
 const val CODIGO_VENTANA_NAV = 100
 const val RESULTADO = "RESULTADO"
 const val NAVEGACION_ACTIVITY = "NavegacionActivity"
 const val LLAVE_MENSAJE = "Llave-mensaje"
+const val PARCELABLE = "LLAVE_PARCELABLE"
 
 
 /**
@@ -25,6 +28,7 @@ const val LLAVE_MENSAJE = "Llave-mensaje"
 class NavegacionActivity : AppCompatActivity() {
 
     lateinit var estudiante: Estudiante
+    lateinit var salon: Salon
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -36,6 +40,14 @@ class NavegacionActivity : AppCompatActivity() {
         estudiante = Estudiante(Date(),"Juan Wilmer",true,notas)
         val amigo:Estudiante = Estudiante(Date(),"Carlos",false,notas)
         estudiante.amigos.add(amigo)
+
+
+        val estudiantes = ArrayList<String>()
+        estudiantes.add("Victor")
+        estudiantes.add("Jessica")
+        estudiantes.add("Julian")
+
+        salon = Salon("45","50",estudiantes)
     }
 
 
@@ -71,8 +83,8 @@ class NavegacionActivity : AppCompatActivity() {
 
        // Log.v("NavegacionActivity","Voy a pasar a ventana dos prueba")
         val intent = Intent(this, VentanaDosActivity::class.java);
-        intent.putExtra("parcel",estudiante)
-        startActivity(intent);
+        intent.putExtra(PARCELABLE,estudiante)
+        startActivity(intent)
 
     }
 
@@ -83,6 +95,8 @@ class NavegacionActivity : AppCompatActivity() {
 
         val intent = Intent(this, VentanaTresActivity::class.java)
         startActivityForResult(intent, CODIGO_VENTANA_NAV)
+        intent.putExtra(PARCELABLE,salon)
+        startActivity(intent)
 
     }
 

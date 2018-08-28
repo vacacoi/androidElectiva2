@@ -16,7 +16,7 @@ class VentanaDosActivity : AppCompatActivity() {
         setContentView(R.layout.activity_ventana_dos)
         Log.v(VENTANA_DOS,"onCreate")
 
-        var estudiante = intent.getParcelableExtra<Estudiante>("parcel")
+        var estudiante = intent.getParcelableExtra<Estudiante>(PARCELABLE)
         Log.v("Ventana dos", "-----------------------")
         Log.v("Ventana dos: ","nombre: ${estudiante.nombre}")
         Log.v("Ventana dos: ","unico: ${estudiante.esHijoUnico}")
@@ -27,6 +27,9 @@ class VentanaDosActivity : AppCompatActivity() {
         var amigo = estudiante.amigos[0]
         Log.v("Ventana dos: ","amigo nombre: ${amigo.nombre}")
         Log.v("Ventana dos: ","amigo unico: ${amigo.esHijoUnico}")
+        Log.v("Ventana dos: ","amigo fecha: ${amigo.fechaNacimiento}")
+        Log.v("Ventana dos: ","amigo notas: ${amigo.notas?.contentToString()}")
+        Log.v("Ventana dos: ","amigo número amigos: ${amigo.amigos.size}")
 
     }
 
