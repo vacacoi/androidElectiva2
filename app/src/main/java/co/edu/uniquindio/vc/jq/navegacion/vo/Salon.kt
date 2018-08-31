@@ -6,7 +6,7 @@ import android.os.Parcelable
 
 class Salon(var numeroSalon:String,
             var numeroSillas:String,
-            var listaEstudiante:ArrayList<String>): Parcelable {
+            var listaEstudiante:List<String>): Parcelable {
 
     constructor(parcel: Parcel) : this(
             parcel.readString(),
@@ -16,7 +16,7 @@ class Salon(var numeroSalon:String,
     override fun writeToParcel(parcel: Parcel, flags: Int) {
         parcel.writeString(numeroSalon)
         parcel.writeString(numeroSillas)
-        parcel.writeList(listaEstudiante)
+        parcel.writeStringList(listaEstudiante)
     }
 
     override fun describeContents(): Int {

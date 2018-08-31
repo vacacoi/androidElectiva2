@@ -5,6 +5,8 @@ import android.os.Bundle
 import android.util.Log
 import co.edu.uniquindio.vc.jq.navegacion.R
 import co.edu.uniquindio.vc.jq.navegacion.vo.Salon
+import java.lang.reflect.Array
+import java.util.*
 
 class VentanaTresActivity : AppCompatActivity() {
 
@@ -18,13 +20,10 @@ class VentanaTresActivity : AppCompatActivity() {
         Log.v("Ventana tres: ","Número de salón: ${salon.numeroSalon}")
         Log.v("Ventana tres: ","Número de sillas: ${salon.numeroSillas}")
 
-        val  varSalon = salon.listaEstudiante.iterator()
+        val  varSalon = salon.listaEstudiante
 
-        while (varSalon.hasNext()){
-            Log.v("Ventana tres: ","Estudiante: ${varSalon.next()}")
+        Log.v("Ventana tres:","Estudiantes: "+varSalon)
 
-
-        }
 
 
 

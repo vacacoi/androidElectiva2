@@ -42,10 +42,7 @@ class NavegacionActivity : AppCompatActivity() {
         estudiante.amigos.add(amigo)
 
 
-        val estudiantes = ArrayList<String>()
-        estudiantes.add("Victor")
-        estudiantes.add("Jessica")
-        estudiantes.add("Julian")
+        val estudiantes:List<String> = listOf("Jessica","Victor","Julian","Carlos")
 
         salon = Salon("45","50",estudiantes)
     }
